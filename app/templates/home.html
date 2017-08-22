@@ -3,9 +3,9 @@
     <h1>Bloc Chat</h1>
   </header>
 
-  <section>
-    <ul>
-      <li></li>
+  <section id="list">
+    <ul ng-repeat="room in home.chatrooms">
+      <li class="room">{{ room.$value }}</li>
     </ul>
   </section>
 </aside>
