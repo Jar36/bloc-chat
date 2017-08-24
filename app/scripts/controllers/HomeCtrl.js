@@ -1,7 +1,7 @@
 (function() {
   function HomeCtrl(Room) {
     this.chatrooms = Room.all;
-
+    
     this.createRoom = function(newRoom) {
       Room.add(newRoom);
     };

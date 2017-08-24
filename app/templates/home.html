@@ -1,5 +1,5 @@
 <aside>
-  <header>
+  <header id="sidebar">
     <h1><span>Bloc </span>Chat</h1>
   </header>
 
@@ -12,7 +12,27 @@
 
   <section id="list">
     <ul ng-repeat="room in home.chatrooms">
-      <li class="room">{{ room.name }}</li>
+      <li class="room" ng-click="roomName = room.name">{{ room.name }}</li>
     </ul>
   </section>
 </aside>
+
+<main>
+  <header id="rooms">
+    <h1>Some Name</h1>
+  </header>
+
+  <section id="rooms-display">
+    <ul>
+      <li>
+        Some Rooms
+      </li>
+      <li>
+        Some Rooms
+      </li>
+      <li>
+        Some Rooms
+      </li>
+    </ul>
+  </section>
+</main>
