@@ -1,11 +1,18 @@
 <aside>
   <header>
-    <h1>Bloc Chat</h1>
+    <h1><span>Bloc </span>Chat</h1>
   </header>
+
+  <section id="room-form">
+    <form ng-submit='home.createRoom(newRoom)'>
+      <input type="text" name="newRoom" placeholder='Enter a room name' ng-model='newRoom'>
+      <input type="submit" name="submit" value="Create">
+    </form>
+  </section>
 
   <section id="list">
     <ul ng-repeat="room in home.chatrooms">
-      <li class="room">{{ room.$value }}</li>
+      <li class="room">{{ room.name }}</li>
     </ul>
   </section>
 </aside>
