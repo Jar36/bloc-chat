@@ -1,7 +1,7 @@
 <aside>
   <header id="sidebar">
     <h1><span>Bloc </span>Chat</h1>
-    <button id='pop-up' type='button' ng-click='home.makeRoom()'>New Room</button>
+    <button id='pop-up' type='button' ng-click='home.makeRoom()'>Create <i class="fa fa-rocket" aria-hidden="true"></i></button>
   </header>
 
   <section id="room-form">
@@ -13,7 +13,7 @@
 
   <section id="list">
     <ul ng-repeat="room in home.chatrooms">
-      <a href="#"><li class="room" ng-click="home.activeRoom(room)">{{ room.name }}</li></a>
+      <a href="#"><li class="room" ng-click="home.activeRoom(room)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
     </ul>
   </section>
 </aside>
