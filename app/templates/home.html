@@ -1,6 +1,7 @@
 <aside>
   <header id="sidebar">
     <h1><span>Bloc </span>Chat</h1>
+    <button id='pop-up' type='button' ng-click='home.makeRoom()'>New Room</button>
   </header>
 
   <section id="room-form">
@@ -12,17 +13,25 @@
 
   <section id="list">
     <ul ng-repeat="room in home.chatrooms">
-      <li class="room" ng-click="roomName = room.name">{{ room.name }}</li>
+      <a href="#"><li class="room" ng-click="home.activeRoom(room)">{{ room.name }}</li></a>
     </ul>
   </section>
 </aside>
 
 <main>
   <header id="rooms">
-    <h1>Some Name</h1>
+    <h1>{{ home.currentRoom.name }}</h1>
   </header>
 
   <section id="rooms-display">
+    <table>
+      <tr>
+        <td>
+
+        </td>
+      </tr>
+    </table>
+
     <ul>
       <li>
         Some Rooms

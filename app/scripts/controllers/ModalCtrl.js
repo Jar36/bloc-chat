@@ -5,5 +5,5 @@
 
   angular
     .module('blocChat')
-    .controller('ModalCtrl', [ModalCtrl]);
+    .controller('ModalCtrl', ['Room', 'HomeCtrl', '$uibModalInstance', ModalCtrl]);
 })();

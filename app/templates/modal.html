@@ -1,6 +1,11 @@
-<section id="room-form">
-  <form ng-submit='home.createRoom(newRoom)'>
-    <input type="text" name="newRoom" placeholder='Enter a room name' ng-model='newRoom'>
-    <input type="submit" name="submit" value="Create">
+<section id='box' ng-controller="modal">
+  <header id='modal-header'>
+    <h3>Create A New Room</h3>
+  </header>
+
+  <form>
+    <input type="text" id="text-input" placeholder="Enter a room name">
+    <button type='button'>Cancel</button>
+    <button type='button'>Create Room</button>
   </form>
 </section>
