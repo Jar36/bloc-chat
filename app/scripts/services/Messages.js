@@ -1,7 +1,7 @@
 (function() {
   function Messages($firebaseArray) {
     var Messages = {};
-    var ref = firebase.database().ref().child("messages")
+    var ref = firebase.database().ref().child('messages')
     var messages = $firebaseArray(ref);
 
     Messages.all = messages;
