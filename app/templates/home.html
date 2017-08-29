@@ -13,7 +13,7 @@
 
   <section id="list">
     <ul ng-repeat="room in home.chatrooms">
-      <a href="#"><li class="room" ng-click="home.activeRoom(room)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
+      <a href="#"><li class="room" ng-click="home.activeRoom(room);home.getMessages(roomId)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
     </ul>
   </section>
 </aside>
@@ -25,23 +25,10 @@
 
   <section id="rooms-display">
     <table>
-      <tr>
-        <td>
+      <tr ng-repeat='message in home.messages'>
+        <td>{{message.username}}</td>
 
-        </td>
       </tr>
     </table>
-
-    <ul>
-      <li>
-        Some Rooms
-      </li>
-      <li>
-        Some Rooms
-      </li>
-      <li>
-        Some Rooms
-      </li>
-    </ul>
   </section>
 </main>
