@@ -7,11 +7,9 @@
       Room.add(newRoom);
     };
 
-    home.messages = Messages.all;
-
     home.getMessages = function(roomId) {
       home.messages = Messages.getRoomById(roomId);
-      home.roomId = roomId;
+      
       return home.messages;
     };
 
@@ -27,7 +25,6 @@
 
     home.activeRoom = function(room) {
       home.currentRoom = room;
-
     };
   }
 
