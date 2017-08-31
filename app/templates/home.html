@@ -24,11 +24,11 @@
   </header>
 
   <section id="rooms-display">
-    <table>
+    <table id="messages">
       <tr ng-repeat='message in home.messages'>
-        <td>{{ home.messages.username }}</td>
-        <td>{{ home.messages.content }}</td>
-
+        <td>{{message.username }}</td>
+        <td>{{message.content }}</td>
+        <td>{{message.sentAt }}</td>
       </tr>
     </table>
   </section>
