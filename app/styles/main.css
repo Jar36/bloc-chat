@@ -25,7 +25,7 @@ aside {
   border-right: 4px solid #f15a24;
 }
 
-#sidebar {
+#sidebar-header {
   display: flex;
   align-items: baseline;
   margin-bottom: -9px;
@@ -33,7 +33,7 @@ aside {
   height: 120px;
 }
 
-#sidebar h1 {
+#sidebar-header h1 {
   color:#1985a1;
   font-size: 2rem;
   display: inline;
@@ -42,7 +42,7 @@ aside {
   top:2rem;
 }
 
-#sidebar h1 span {
+#sidebar-header h1 span {
   color: #4c5c68;
   border-bottom: 4px dotted #f15a24;
 }

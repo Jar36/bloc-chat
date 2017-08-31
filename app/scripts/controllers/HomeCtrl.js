@@ -3,25 +3,22 @@
     var home = this;
     this.chatrooms = Room.all;
 
-    home.createRoom = function(newRoom) {
+    /*home.createRoom = function(newRoom) {
       Room.add(newRoom);
-    };
+    };*/
 
     home.getMessages = function(roomId) {
       home.messages = Messages.getRoomById(roomId);
-      
       return home.messages;
     };
 
-
     home.makeRoom = function() {
       $uibModal.open({
+        controller: 'ModalCtrl as modal',
         templateUrl: '/templates/modal.html',
-        size: 'sm',
-        controller: 'ModalCtrl as modal'
+        size: 'md'
       });
     };
-
 
     home.activeRoom = function(room) {
       home.currentRoom = room;
