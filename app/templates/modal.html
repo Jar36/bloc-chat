@@ -1,11 +1,13 @@
-<section id='box' ng-controller="modal">
+<section id='box'>
   <header id='modal-header'>
     <h3>Create A New Room</h3>
   </header>
 
   <form>
     <input type="text" id="text-input" placeholder="Enter a room name">
-    <button type='button'>Cancel</button>
-    <button type='button'>Create Room</button>
+    <div id='button-wrapper'>
+      <button type='button' id='cancel'>Cancel <i class="fa fa-ban" aria-hidden="true"></i></button>
+      <button type='button' id='create'>Create Room <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+    </div>
   </form>
 </section>

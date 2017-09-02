@@ -7,10 +7,32 @@ html, body {
 
 }
 
-h1 {
+h1, h3 {
   font-family: 'Comfortaa', cursive;
   font-size: 3rem;
 }
+
+h4, .time p {
+  font-family: 'Comfortaa', cursive;
+}
+
+/*
+//.....................................................................
+//...SSSSSSS....iiii.......dddd..........ebbb..........................
+//..SSSSSSSSS...iiii.......dddd..........ebbb..........................
+//..SSSSSSSSSS.............dddd..........ebbb..........................
+//.SSSSS..SSSS..iiii..ddddddddd..eeeeee..ebbbbbbbb....aaaaaa..arrrrrr..
+//.SSSSS........iiii.dddddddddd.eeeeeeee.ebbbbbbbbb..aaaaaaaa.arrrrrr..
+//..SSSSSSS.....iiiiidddd.ddddddeee.eeee.ebbbb.bbbbbbaaa.aaaaaarrrr....
+//...SSSSSSSSS..iiiiiddd...dddddeee..eeeeebbb...bbbb....aaaaaaarrr.....
+//.....SSSSSSS..iiiiiddd...dddddeeeeeeeeeebbb...bbbb.aaaaaaaaaarrr.....
+//........SSSSS.iiiiiddd...dddddeeeeeeeeeebbb...bbbbbaaaaaaaaaarrr.....
+//.SSSS....SSSS.iiiiiddd...dddddeee......ebbb...bbbbbaaa.aaaaaarrr.....
+//.SSSSSSSSSSSS.iiiiidddd.ddddddeee..eeeeebbbb.bbbbbbaaa.aaaaaarrr.....
+//..SSSSSSSSSS..iiii.dddddddddd.eeeeeeee.ebbbbbbbbb.baaaaaaaaaarrr.....
+//...SSSSSSSS...iiii..ddddddddd..eeeeee..ebbbbbbbb...aaaaaaaaaarrr.....
+//.....................................................................
+*/
 
 aside {
   position:fixed;
@@ -139,8 +161,26 @@ hr {
 
 #room-form input[type=submit]:hover {
   color: #606061;
-  background: #C2E2E8/*#A7CECB*/;
+  background: #C2E2E8;
 }
+
+/*
+//............................................
+//.MMMMMM...MMMMMM...........iiii.............
+//.MMMMMM...MMMMMM...........iiii.............
+//.MMMMMM...MMMMMM............................
+//.MMMMMMM.MMMMMMM..aaaaaa...iiii.nnnnnnnn....
+//.MMMMMMM.MMMMMMM.aaaaaaaa..iiii.nnnnnnnnn...
+//.MMMMMMM.MMMMMMMaaaa.aaaaa.iiii.nnnn.nnnnn..
+//.MMMMMMMMMMMMMMM....aaaaaa.iiii.nnnn..nnnn..
+//.MMMMMMMMMMMMMMM.aaaaaaaaa.iiii.nnnn..nnnn..
+//.MMMMMMMMMMMMMMMaaaaaaaaaa.iiii.nnnn..nnnn..
+//.MMMM.MMMMM.MMMMaaaa.aaaaa.iiii.nnnn..nnnn..
+//.MMMM.MMMMM.MMMMaaaa.aaaaa.iiii.nnnn..nnnn..
+//.MMMM.MMMMM.MMMMaaaaaaaaaa.iiii.nnnn..nnnn..
+//.MMMM.MMMMM.MMMM.aaaaaaaaa.iiii.nnnn..nnnn..
+//............................................
+*/
 
 main {
   position: fixed;
@@ -156,25 +196,28 @@ header#rooms {
   height: 115px;
   width: 100%;
   position: fixed;
-  background: #f36c3d;
+  background: #f15a24;
   display: flex;
   padding: 2px;
   text-transform: uppercase;
+}
 
+header#rooms span#b {
+  background: #252527;
+  color: #e2f5fe;
+  padding: 15px 20px;
+  border: 4px solid #1985a1;
+  border-radius: 4px;
 }
 
 #rooms h1 {
-  color: #c1e5f6;
-  position:relative;
-  top:.5rem;
+  color: #e2f5fe;
   width:60%;
   text-align: center;
-
 }
 
 #rooms-display {
 width:100%;
-
 }
 
 .message-content {
@@ -213,10 +256,103 @@ width:100%;
   justify-content: flex-end;
   width: 15%;
 }
+
+#message-content{
+  color:#424242;
+}
+
 #time-sent {
   /*align-self: flex-end;
   position: relative;
   top: 1.6rem;
   left: 20rem;
   overflow: none;*/
+}
+
+/*
+//......................................................
+//.MMMMMM...MMMMMM..................dddd...........lll..
+//.MMMMMM...MMMMMM..................dddd...........lll..
+//.MMMMMM...MMMMMM..................dddd...........lll..
+//.MMMMMMM.MMMMMMM...oooooo....ddddddddd..aaaaaa...lll..
+//.MMMMMMM.MMMMMMM.ooooooooo..dddddddddd.aaaaaaaa..lll..
+//.MMMMMMM.MMMMMMM.oooo.oooooddddd.dddddaaaa.aaaaa.lll..
+//.MMMMMMMMMMMMMMMoooo...oooodddd...dddd....aaaaaa.lll..
+//.MMMMMMMMMMMMMMMoooo...oooodddd...dddd.aaaaaaaaa.lll..
+//.MMMMMMMMMMMMMMMoooo...oooodddd...ddddaaaaaaaaaa.lll..
+//.MMMM.MMMMM.MMMMoooo...oooodddd...ddddaaaa.aaaaa.lll..
+//.MMMM.MMMMM.MMMM.oooo.oooooddddd.dddddaaaa.aaaaa.lll..
+//.MMMM.MMMMM.MMMM.ooooooooo..ddddddddddaaaaaaaaaa.lll..
+//.MMMM.MMMMM.MMMM...oooooo....ddddddddd.aaaaaaaaa.lll..
+//......................................................
+*/
+
+#box {
+  z-index: 3;
+  position: relative;
+  background-color: rgba(76, 92, 104, 0.94);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 60%;
+  height: 400px;
+  top: 8rem;
+  left: 30rem;
+  border: 4px solid #1985a1;
+  border-radius: 4px;
+  box-shadow: 0px 10px 14px 6px rgba(66, 66, 66, 0.7);
+}
+
+#box h3 {
+  color:#eee;
+}
+
+input#text-input {
+  display: block;
+  width: 400px;
+  border-radius: 4px;
+  border: none;
+  padding: 15px;
+}
+
+div#button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#cancel {
+  background: transparent;
+  padding: 15px 45px;
+  border: 2px solid #f15a24;
+  border-radius: 4px;
+  color: #eee;
+  transition: all .3s ease-in-out;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#cancel:hover {
+  color: #eee;
+  background: #f15a24;
+  border: 2px solid #f15a24;
+}
+
+#create {
+  background: transparent;
+  padding: 15px 45px;
+  border: 2px solid #1985a1;
+  border-radius: 4px;
+  color: #eee;
+  transition: all .3s ease-in-out;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#create:hover {
+  color: #eee;
+  background: #1985a1;
+  border: 2px solid #1985a1;
 }

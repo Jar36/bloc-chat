@@ -3,21 +3,23 @@
     var home = this;
     this.chatrooms = Room.all;
 
-    /*home.createRoom = function(newRoom) {
+    home.makeRoom = function() {
+      $uibModal.open({
+        animation: true,
+        controller: 'ModalCtrl as modal',
+        templateUrl: '/templates/modal.html',
+        size: 'sm'
+      });
+      console.log('I am the modal');
+    };
+
+    home.createRoom = function(newRoom) {
       Room.add(newRoom);
-    };*/
+    };
 
     home.getMessages = function(roomId) {
       home.messages = Messages.getRoomById(roomId);
       return home.messages;
-    };
-
-    home.makeRoom = function() {
-      $uibModal.open({
-        controller: 'ModalCtrl as modal',
-        templateUrl: '/templates/modal.html',
-        size: 'md'
-      });
     };
 
     home.activeRoom = function(room) {
