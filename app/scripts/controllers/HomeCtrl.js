@@ -13,9 +13,9 @@
       console.log('I am the modal');
     };
 
-    home.createRoom = function(newRoom) {
+    /*home.createRoom = function(newRoom) {
       Room.add(newRoom);
-    };
+    };*/
 
     home.getMessages = function(roomId) {
       home.messages = Messages.getRoomById(roomId);
