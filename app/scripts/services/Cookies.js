@@ -12,6 +12,11 @@
       });
     }
     console.log('I am the on-load modal');
+
+    this.createUserName = function(userName) {
+      $cookies.put('blocChatCurrentUser', userName);
+      $uibModalInstance.close();
+    }
   }
 
   angular
