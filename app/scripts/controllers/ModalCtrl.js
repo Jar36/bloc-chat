@@ -14,10 +14,10 @@
       $uibModalInstance.close();
     };
 
-    
+
   };
 
   angular
     .module('blocChat')
-    .controller('ModalCtrl', ['Room', '$uibModal' , '$uibModalInstance', '$cookies', ModalCtrl]);
+    .controller('ModalCtrl', ['Room', '$uibModal', '$uibModalInstance', '$cookies', ModalCtrl]);
 })();

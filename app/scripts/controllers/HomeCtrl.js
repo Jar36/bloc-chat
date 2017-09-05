@@ -7,7 +7,7 @@
 
     this.currentUser = $cookies.get('blocChatCurrentUser');
 
-    /*this.makeRoom = function() {
+    this.makeRoom = function() {
       $uibModal.open({
         animation: true,
         controller: 'ModalCtrl as modal',
@@ -15,7 +15,7 @@
         size: 'sm'
       });
       console.log("I am the modal")
-    };*/
+    };
 
     this.createRoom = function(newRoom) {
       Room.add(newRoom);
