@@ -8,7 +8,7 @@
 
     Room.add = function(newRoom) {
       rooms.$add({name: newRoom});
-      
+
     }
 
     return Room;

@@ -17,7 +17,7 @@
         content: newMessage
       });
     }
-    /*console.log(messages);*/
+    console.log(messages);
     return Messages;
   };
 

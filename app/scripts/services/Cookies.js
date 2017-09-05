@@ -4,14 +4,14 @@
     if(!currentUser || currentUser === '') {
       $uibModal.open({
         animation: true,
-        controller: 'ModalCtrl as modal',
+        controller: 'CookiesCtrl as cookies',
         size: 'sm',
         templateUrl: '/templates/onload-modal.html',
         backdrop: 'static',
         keyboard: false
       });
     }
-    console.log('I am the onload modal');
+    console.log('I am the on-load modal');
   }
 
   angular
