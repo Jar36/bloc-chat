@@ -12,7 +12,7 @@
         animation: true,
         controller: 'ModalCtrl as modal',
         templateUrl: '/templates/modal.html',
-        size: 'sm'
+        size: 'md'
       });
       console.log("I am the modal")
     };

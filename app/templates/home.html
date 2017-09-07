@@ -1,24 +1,20 @@
-<aside>
-  <header id="sidebar-header">
-    <h1><span>Bloc</span> Chat</h1>
-    <button id='pop-up' type='button' ng-click="home.makeRoom()">Create <i class="fa fa-rocket" aria-hidden="true"></i></button>
-  </header><hr />
+    <aside>
+      <header id="sidebar-header">
+        <h1><span>Bloc</span> Chat</h1>
+        <button id='pop-up' type='button' ng-click="home.makeRoom()">Create <i class="fa fa-rocket" aria-hidden="true"></i></button>
+      </header><hr />
 
-  <!--<section id="room-form">
-    <form ng-submit='home.createRoom(newRoom)'>
-      <input type="text" name="newRoom" placeholder='Enter a room name' ng-model='newRoom'>
-      <input type="submit" name="submit" value="Create">
-    </form>
-  </section>-->
+      <section id="list">
+        <ul class="room-list" ng-repeat="room in home.chatrooms">
+          <a href="#"><li class="room" ng-click="home.activeRoom(room); home.getMessages(room.$id)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
+        </ul>
+      </section>
+    </aside>
 
-  <section id="list">
-    <ul ng-repeat="room in home.chatrooms">
-      <a href="#"><li class="room" ng-click="home.activeRoom(room); home.getMessages(room.$id)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
-    </ul>
-  </section>
-</aside>
 
-<main>
+
+
+  <main>
   <header id="rooms">
     <h1><span id="b">B</span> {{ home.currentRoom.name }}</h1>
   </header>
@@ -36,3 +32,4 @@
     </div>
   </section>
 </main>
+  
