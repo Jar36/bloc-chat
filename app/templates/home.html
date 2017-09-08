@@ -25,7 +25,7 @@
             <p id='message-content'>{{ message.content }}</p>
           </div>
           <div class='time'>
-            <p id='time-sent'>{{ message.sentAt | date:shortTime }}</p>
+            <p id='time-sent'>{{ message.sentAt | date:'short' }}</p>
           </div>
         </div>
       </section>
@@ -42,18 +42,6 @@
         </div>
       </div>
     </section>
-
-
-      <!--<footer id='message-form'>
-
-
-            <form ng-submit=''>
-              <input id='message-input' type="text" name="newRoom" placeholder='Enter a message' ng-model='newRoom'>
-              <input id='message-button' type="submit" name="submit" value="Post">
-            </form>
-
-
-      </footer>-->
 
     </div>
   </div>
