@@ -1,35 +1,60 @@
-    <aside>
-      <header id="sidebar-header">
-        <h1><span>Bloc</span> Chat</h1>
-        <button id='pop-up' type='button' ng-click="home.makeRoom()">Create <i class="fa fa-rocket" aria-hidden="true"></i></button>
-      </header><hr />
+<aside>
+  <header id="sidebar-header">
+    <h1><span>Bloc</span> Chat</h1>
+    <button id='pop-up' type='button' ng-click="home.makeRoom()">Create <i class="fa fa-rocket" aria-hidden="true"></i></button>
+  </header><hr />
 
-      <section id="list">
-        <ul class="room-list" ng-repeat="room in home.chatrooms">
-          <a href="#"><li class="room" ng-click="home.activeRoom(room); home.getMessages(room.$id)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
-        </ul>
+<section id="list">
+  <ul class="room-list" ng-repeat="room in home.chatrooms">
+    <a href="#"><li class="room" ng-click="home.activeRoom(room); home.getMessages(room.$id)"><i class="fa fa-comments-o" aria-hidden="true">...</i> {{ room.name }}</li></a>
+  </ul>
+  </section>
+</aside>
+
+<main>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <header id="rooms">
+        <h1><span id="b">B</span> {{ home.currentRoom.name }}</h1>
+      </header>
+
+      <section id="rooms-display">
+        <div class="message-content" ng-repeat='message in home.messages'>
+          <div class='user-and-content'>
+            <h4 id='user'>{{ message.username }}</h4>
+            <p id='message-content'>{{ message.content }}</p>
+          </div>
+          <div class='time'>
+            <p id='time-sent'>{{ message.sentAt | date:shortTime }}</p>
+          </div>
+        </div>
       </section>
-    </aside>
 
-
-
-
-  <main>
-  <header id="rooms">
-    <h1><span id="b">B</span> {{ home.currentRoom.name }}</h1>
-  </header>
-
-  <section id="rooms-display">
-    <div class="message-content" ng-repeat='message in home.messages'>
-      <div class='user-and-content'>
-        <h4 id='user'>{{ message.username }}</h4>
-        <p id='message-content'>{{ message.content }}</p>
+    <section>
+      <div class="row message-form">
+        <div class="col-lg-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter your message here ..." ng-model='home.newMessage.content'>
+            <span class="input-group-btn">
+              <button class="btn btn-default message-button" type="button" ng-click="home.sendMessage()">Post <i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+            </span>
+          </div>
+        </div>
       </div>
-      <div class='time'>
-        <p id='time-sent'>{{ message.sentAt }}</p>
-      </div>
+    </section>
+
+
+      <!--<footer id='message-form'>
+
+
+            <form ng-submit=''>
+              <input id='message-input' type="text" name="newRoom" placeholder='Enter a message' ng-model='newRoom'>
+              <input id='message-button' type="submit" name="submit" value="Post">
+            </form>
+
+
+      </footer>-->
 
     </div>
-  </section>
+  </div>
 </main>
-  

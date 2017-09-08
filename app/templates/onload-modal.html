@@ -3,10 +3,18 @@
     <h3>Set a username</h3>
   </header>
 
-  <form ng-submit=''>
+  <form ng-submit='cookies.createUserName()'>
     <input type="text" class="text-input" name="input" placeholder="Enter a username" ng-model='cookies.username' required>
     <div class='button-wrapper'>
-      <button type='submit' class='create' ng-submit=''>Set username <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+      <button type='submit' class='create' ng-submit='cookies.createUserName()'>Set username <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
     </div>
   </form>
 </section>
+
+<div class="modal-body">
+  <h5 class="modal-prompt">Enter a username</h5>
+  <input type="text" name="input" placeholder="Name" ng-model="cookies.username" required>
+</div>
+<div class="modal-footer">
+  <button class="btn-new" ng-click="cookies.createUsername()">Submit</button>
+</div>

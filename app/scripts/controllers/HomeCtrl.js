@@ -4,8 +4,13 @@
     this.chatrooms = Room.all;
     this.currentRoom = null;
     this.messages = null;
-
     this.currentUser = $cookies.get('blocChatCurrentUser');
+    this.newMessage = {
+      content: null,
+      roomId: null,
+      sentAt: null,
+      username: null
+    }
 
     this.makeRoom = function() {
       $uibModal.open({
@@ -24,11 +29,21 @@
     this.getMessages = function(roomId) {
       this.messages = Messages.getRoomById(roomId);
       return this.messages;
-    };
+    }
 
     this.activeRoom = function(room) {
       this.currentRoom = room;
-    };
+      this.messages = Messages.getRoomById(room.$id);
+    }
+
+    this.sendMessage = function(newMessage) {
+      this.newMessage.roomId = this.currentRoom.$id;
+      this.newMessage.username = this.currentUser;
+      this.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+      console.log(this.currentUser);
+      console.log(this.currentRoom.$id);
+      Messages.send(this.newMessage);
+    }
   }
 
   angular

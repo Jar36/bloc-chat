@@ -5,10 +5,10 @@
       $uibModal.open({
         animation: true,
         controller: 'CookiesCtrl as cookies',
-        size: 'sm',
+        size: 'md',
         templateUrl: '/templates/onload-modal.html',
-        backdrop: 'static',
-        keyboard: false
+        backdrop: 'static'
+
       });
     }
     console.log('I am the on-load modal');
